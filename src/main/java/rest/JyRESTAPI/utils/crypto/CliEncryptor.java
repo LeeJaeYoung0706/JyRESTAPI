@@ -1,9 +1,8 @@
-package rest.JyRESTAPI.utils.https;
+package rest.JyRESTAPI.utils.crypto;
 
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.jasypt.iv.RandomIvGenerator;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component

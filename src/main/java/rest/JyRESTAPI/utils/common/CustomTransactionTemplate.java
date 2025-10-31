@@ -1,4 +1,4 @@
-package rest.JyRESTAPI.utils.https;
+package rest.JyRESTAPI.utils.common;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +8,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionException;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
+import rest.JyRESTAPI.utils.https.CustomResponseException;
 
 @Component
 @Slf4j

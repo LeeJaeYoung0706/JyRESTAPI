@@ -1,8 +1,9 @@
-package rest.JyRESTAPI.utils.https;
+package rest.JyRESTAPI.utils.common;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
+import rest.JyRESTAPI.utils.https.CustomResponseException;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

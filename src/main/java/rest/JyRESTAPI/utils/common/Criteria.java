@@ -1,4 +1,4 @@
-package rest.JyRESTAPI.utils.https;
+package rest.JyRESTAPI.utils.common;
 
 public class Criteria {
     // DB에서 페이지 처리된 데이터를 가져오는데 필요한 정보
