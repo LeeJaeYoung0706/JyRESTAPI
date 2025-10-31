@@ -1,0 +1,11 @@
+.git
+.gradle
+build/
+out/
+.idea
+*.iml
+**/node_modules
+Dockerfile~
+*.log
+!build/libs/
+!build/libs/*.jar

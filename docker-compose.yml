@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: admin1
+      POSTGRES_PASSWORD: ENC(fxR6hLw2RvnELMK9cSu+DvGzka/MJLT+LkBhzapQcumOb/espLDmjxVgYVk3i/48)
+      POSTGRES_DB: jy_rest_api
+      TZ: Asia/Seoul
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata18:/var/lib/postgresql      # ✅ 18+ 권장 경로
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin1 -d jy_rest_api"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    image: jy-rest:0.1
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # Jasypt 마스터 키 (앱에서 ENC 복호화용)
+      #JASYPT_ENCRYPTOR_PASSWORD: ""
+      # yml 대신 환경변수로 덮어쓰기 (컨테이너 네트워크 호스트명: db)
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/jy_rest_api?sslmode=disable"
+      SPRING_DATASOURCE_USERNAME: "admin1"
+    ports: ["8080:8080"]
+
+volumes:
+  pgdata18:
