@@ -1,4 +1,4 @@
-package rest.JyRESTAPI.utils;
+package rest.JyRESTAPI.utils.https;
 
 import lombok.Getter;
 import lombok.ToString;

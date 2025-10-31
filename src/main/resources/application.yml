@@ -1,1 +1,11 @@
-spring.application.name=JyRESTAPI
+server:
+  port: 8080
+
+spring:
+  application:
+    name: JyRESTAPI
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ENC(9B5pdRUO/heQZRGSwFpO1Mm6krEy59/7HkYmrE3u/aXtzcxVPk7zh15jSgA7V1Ch)?sslmode=verify-full
+    username: ENC(+Thx7z/gMTYrPfuiC+aj8WHp57c2gljX7n2v+LBbrTpmdsXslV2W1Mk5KrzQlyVA)
+    password: ENC(fxR6hLw2RvnELMK9cSu+DvGzka/MJLT+LkBhzapQcumOb/espLDmjxVgYVk3i/48)
