@@ -1,4 +1,4 @@
-package rest.JyRESTAPI.config.database;
+package rest.JyRESTAPI.config.db;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
