@@ -10,3 +10,4 @@ Dockerfile~
 !build/libs/
 !build/libs/*.jar
 .env/
+*.env
