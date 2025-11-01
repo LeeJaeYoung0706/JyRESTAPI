@@ -1,15 +1,26 @@
 server:
   port: 8080
 
+
 spring:
-  application:
-    name: JyRESTAPI
+  config:
+    import: optional:file:.env/local.env
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/jy_rest_api?sslmode=disable
-    username: admin1
-    password: ENC(fxR6hLw2RvnELMK9cSu+DvGzka/MJLT+LkBhzapQcumOb/espLDmjxVgYVk3i/48)
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  application:
+    name: JyRESTAPI
   jasypt:
     encryptor:
       algorithm: PBEWithHMACSHA512AndAES_256
       iv-generator-classname: org.jasypt.iv.RandomIvGenerator
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+    import: optional:file:.env/prod.env
