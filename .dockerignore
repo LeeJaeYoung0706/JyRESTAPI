@@ -9,4 +9,4 @@ Dockerfile~
 *.log
 !build/libs/
 !build/libs/*.jar
-secret.env
+.env/
